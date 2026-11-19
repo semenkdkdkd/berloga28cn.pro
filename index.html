@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Berloga 家庭度假酒店｜俄罗斯布拉戈维申斯克（海兰泡）</title>
+  <meta name="description" content="了解俄罗斯布拉戈维申斯克郊外的 Berloga 家庭度假酒店。查看客房、木屋、泳池、到店地址及联系方式。">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+  <header>
+    <div class="wrap top">
+      <a class="brand" href="#" aria-label="Berloga 首页"><img src="logo.png" width="42" height="40" alt=""><span>BERLOGA <small>家庭度假酒店</small></span></a>
+      <nav aria-label="主导航"><a href="catalog.html#rooms">客房</a><a href="catalog.html#cottages">木屋</a><a href="catalog.html#gazebos">凉亭</a><a href="catalog.html#halls">宴会</a><a href="#leisure">休闲设施</a><a href="#visit">到店指南</a><a href="https://berloga28.ru/" lang="ru" hreflang="ru">Русский</a><a href="reviews.html">住客评价</a><a href="requisites.html">经营主体与银行信息</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-content">
+        <p class="location">俄罗斯阿穆尔州 · 布拉戈维申斯克（海兰泡）</p>
+        <h1>Berloga<br>家庭度假酒店</h1>
+        <p>在布拉戈维申斯克郊外，与家人朋友一起住木屋、游泳，享受轻松的假日。</p>
+        <a class="button" href="catalog.html">查看房型、场地与价格</a>
+      </div>
+    </section>
+    <section class="wrap section" id="stay">
+      <h2>住宿选择</h2>
+      <div class="cards">
+        <article><img src="room.jpg" alt="Berloga 酒店客房" loading="lazy"><div class="card-copy"><h3>主楼客房</h3><p>适合家庭和小团体。部分客房配有露台或独立烧烤区。</p></div></article>
+        <article><img src="cottage.png" alt="Berloga 度假木屋" loading="lazy"><div class="card-copy"><h3>独栋木屋</h3><p>带露台的木屋，适合亲友结伴出游。部分木屋最多可容纳 25 人。</p></div></article>
+      </div>
+      <p class="note">客房及木屋入住时间为 14:00 起，退房时间为次日 12:00 前，均为当地时间。</p>
+      <p class="listing-links"><a href="catalog.html#rooms">全部客房</a><a href="catalog.html#cottages">全部木屋</a><a href="catalog.html#gazebos">凉亭与烧烤区</a><a href="catalog.html#halls">宴会与婚礼场地</a></p>
+    </section>
+    <section class="leisure" id="leisure">
+      <div class="wrap section feature">
+        <img src="pool.jpg" alt="Berloga 度假区泳池" loading="lazy">
+        <div>
+          <h2>休闲设施</h2>
+          <dl>
+            <dt>泳池与桑拿</dt><dd>度假区设有室内外泳池，以及桑拿和土耳其浴室。</dd>
+            <dt>户外活动</dt><dd>园区设有烧烤区和凉亭，还可体验划船及脚踏船。</dd>
+            <dt>聚会与活动</dt><dd>设有宴会厅，可用于家庭庆祝、婚礼和团体活动。</dd>
+          </dl>
+          <p class="note">出发前可向酒店咨询设施开放情况。游泳时请自备泳衣、泳帽及拖鞋。</p>
+        </div>
+      </div>
+    </section>
+    <section class="wrap section visit" id="visit">
+      <div><h2>到店指南</h2><p>从布拉戈维申斯克市区乘出租车时，可将下方俄文地址出示给司机。</p></div>
+      <div class="visit-details">
+        <h3>酒店地址</h3>
+        <p>俄罗斯阿穆尔州，布拉戈维申斯克市郊，邮编 675530</p>
+        <address lang="ru" id="address">Амурская область, г. Благовещенск, с. Плодопитомник, ул. Клубничная, 35</address>
+        <button type="button" id="copy" hidden>复制俄文地址</button>
+        <span id="copy-status" role="status"></span>
+        <h3>联系酒店</h3>
+        <p>全天 24 小时开放</p>
+        <ul class="contacts">
+          <li><a href="tel:+74162209996">+7 (4162) 20-99-96</a></li>
+          <li><a href="tel:+74162209997">+7 (4162) 20-99-97</a></li>
+          <li><a href="tel:+79143919997">+7 (914) 391-99-97</a></li>
+          <li><a href="mailto:berloga-28blg@yandex.ru">berloga-28blg@yandex.ru</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© Berloga 家庭度假酒店</div></footer>
+  <script>
+    const copyButton = document.querySelector('#copy');
+    const address = document.querySelector('#address');
+    const copyStatus = document.querySelector('#copy-status');
+
+    if (navigator.clipboard) {
+      copyButton.hidden = false;
+      copyButton.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(address.textContent.trim());
+          copyStatus.textContent = '已复制';
+        } catch {
+          copyStatus.textContent = '请选中上方俄文地址并手动复制。';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
